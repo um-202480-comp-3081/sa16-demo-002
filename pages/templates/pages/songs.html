@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html>
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Song List</h1>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Book List</title>
-</head>
+<ul>
+  <li>The Gummy Bear Song</li>
+  <li>Campfire Song Song</li>
+</ul>
 
-<body>
-  <h1>Song List</h1>
-
-  <ul>
-    <li>The Gummy Bear Song</li>
-    <li>Campfire Song Song</li>
-  </ul>
-
-  <a href="{% url 'pages:home' %}">Home</a>
-</body>
-
-</html>
+<a href="{% url 'pages:home' %}">Home</a>
+{% endblock %}

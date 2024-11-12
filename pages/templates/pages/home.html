@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html>
+{% extends "pages/base.html" %}
+{% load static %}
+{% block content %}
+<h1>Book List</h1>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Book List</title>
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
+<ul>
+  <li><img src="{% static 'images/philostone.jpeg' %}" alt="">Harry Potter and the Philospoher's Stone</li>
+  <li>Harry Potter and the Chamber of Secrets</li>
+</ul>
 
-<body>
-  <h1>Book List</h1>
-
-  <ul>
-    <li><img src="{% static 'images/philostone.jpeg' %}" alt="">Harry Potter and the Philospoher's Stone</li>
-    <li>Harry Potter and the Chamber of Secrets</li>
-  </ul>
-
-  <a href="{% url 'pages:songs' %}">Song List</a>
-</body>
-
-</html>
+<a href="{% url 'pages:songs' %}">Song List</a>
+{% endblock %}
